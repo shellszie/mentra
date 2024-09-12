@@ -1,7 +1,14 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form'
 import Container from "react-bootstrap/Container";
+import {useNavigate} from 'react-router-dom';
 export default function Domain() {
+
+    let navigate = useNavigate();
+    const routeChange = () => {
+        let path = '/q1';
+        navigate(path);
+    }
     return (
         <Form>
             <Form.Group className="mb-3 w-50">
@@ -9,7 +16,7 @@ export default function Domain() {
                 <Form.Control type="text" placeholder="" />
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button variant="primary" onClick={routeChange} type="submit">
                 Start Quiz
             </Button>
         </Form>
