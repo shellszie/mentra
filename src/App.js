@@ -6,6 +6,9 @@ import {BrowserRouter} from "react-router-dom";
 import {Link, Route, Routes} from "react-router-dom";
 
 function App() {
+
+    console.log("open API key = " + process.env.REACT_APP_OPENAI_API_KEY);
+
     return (
         <BrowserRouter>
             <Container>
